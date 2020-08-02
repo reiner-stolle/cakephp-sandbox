@@ -38,7 +38,7 @@ before_script:
 
   - if [[ $CHECKS != 1 ]]; then composer require phpunit/phpunit:"^8.3"; fi
 
-  - cp config/app.php config/app_local.php
+  - cp config/app_local.default.php config/app_local.php
 
   - bin/cake migrations migrate
   - bin/cake migrations seed
